@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imag/imag-index.png" type="image/x icon">
+
+    <!--Mi CSS-->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>El Mundo de la Lana</title>
+
+</head>
+<body>
+
+    <!--Empieza la nav-->
+    <nav>
+        <a href="./index.html">
+            <img src="./imag/imag-index.png" alt="Logo Mundo de la Lana" title="Mundo de la Lana">
+        </a>
+        <ul>
+            <li>
+                <a href="./index.html">Ver Productos</a>
+            </li>
+            <li>
+                <a href="./editar-productos.html">Creación de Productos</a>
+            </li>
+            <li>
+                <a href="#">Carrito</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <header>
+
+
+    </header>
+
+    <main>
+        <h1>El Mundo de la Lana</h1>
+        
+        <form id="crearProducto" class="formulario">
+            <h3>Creación de un producto.</h3>
+            <input type="text" placeholder="Ingrese el nombre del producto" name="nombre" required>
+            <input type="number" placeholder="Ingrese el precio del producto" name="precio" required>
+            <input type="number" placeholder="Ingrese stock disponible" name="stock" required>
+            <button type="submit">Crear producto</button>
+        </form>
+
+        <h2>Productos creados:</h2>
+    
+        <div id="contenedorProductos">
+
+        </div>
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+
+
+
+
+
+    <!--Mi JS-->
+    <script src="./editar-productos.js"></script>
+
+</body>
+</html>
