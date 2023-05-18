@@ -1,6 +1,13 @@
 //Crear productos.
 const productos = JSON.parse(localStorage.getItem("productos")) || []
 
+const mensaje = (mensaje) => {
+    Toastify({
+        text: mensaje,
+        duration: 3000
+        }).showToast();
+}
+
 const crearProducto = document.querySelector("#crearProducto")
 crearProducto.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -17,7 +24,7 @@ crearProducto.addEventListener("submit", (e) => {
     crearProducto.reset()
     id++
     localStorage.setItem("id", id)
-    alert("Se ha creado el producto " + producto.nombre + ".")
+    mensaje("Se ha creado el producto " + producto.nombre + " correctamente.")
     console.log(productos)
     verProducto(producto)
 })
@@ -32,7 +39,7 @@ const borrarProducto = (id) => {
         localStorage.setItem("productos", JSON.stringify(productos))
         const tarjetaProducto = document.querySelector("#producto" + id)
         tarjetaProducto.remove()
-        alert("Se ha borrado el producto exitosamente.")
+        mensaje("Se ha borrado el producto correctamente.")
     })
 }
 
@@ -47,7 +54,7 @@ const editarProducto = (id) => {
         productos[index].precio = datos["precio"].value
         productos[index].stock = datos["stock"].value
         localStorage.setItem("productos", JSON.stringify(productos))
-        alert("Se ha editado el producto exitosamente.")
+        mensaje("Se ha actualizado el producto correctamente.")
     })
 }
 
